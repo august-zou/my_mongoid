@@ -14,6 +14,7 @@ module MyMongoid
 
     def initialize(attrs={})
       process_attributes(attrs)
+      yield(self) if block_given?
     end
 
     module ClassMethods

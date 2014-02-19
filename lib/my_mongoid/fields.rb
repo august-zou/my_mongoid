@@ -35,27 +35,22 @@ module MyMongoid
           
           if options
             options.each_pair do |key,value|
-              if key == :as
+              case key
+              when :as 
                 valued = value.to_s
+                
                 define_method(valued) do
-                  read_attribute(valued)
+                  read_attribute(named)
                 end
 
                 define_method("#{valued}=") do |v|
-                  write_attribute(valued, v)
+                  write_attribute(named, v)
                 end
+              when :default
+                write_attribute(named, value)
               end
             end
           end
-          # module_eval %{  
-          #   def #{named}   
-          #     read_attribute(#{named})
-          #   end  
-              
-          #   def #{named}= value  
-          #     write_attribute(#{named}, value)
-          #   end
-          #   }
         end
       end
     end
