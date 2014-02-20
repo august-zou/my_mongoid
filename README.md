@@ -22,7 +22,7 @@ TODO: Write usage instructions here
 
 ## TravisCI
 
-![[Build Status]](https://travis-ci.org/{your_github_account}/my_mongoid)
+![[Build Status]](https://travis-ci.org/august-zou/my_mongoid)
 
 
 ## Contributing
