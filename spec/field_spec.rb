@@ -58,14 +58,7 @@ describe MyMongoid::Field do
   end
 
   describe "Process Attributes:" do
-    class FooModel
-      include MyMongoid::Document
-      field :number
-      def number=(n)
-        self.attributes["number"] = n + 1
-      end
-    end
-
+    
     let(:foo) {
       FooModel.new({})
     }
