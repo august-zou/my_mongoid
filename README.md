@@ -1,6 +1,6 @@
 # MyMongoid
 
-TODO: Write a gem description
+[![Build Status](https://secure.travis-ci.org/august-zou/my_mongoid.png?branch=master)](http://travis-ci.org/august-zou/my_mongoid)
 
 ## Installation
 
@@ -19,10 +19,6 @@ Or install it yourself as:
 ## Usage
 
 TODO: Write usage instructions here
-
-## TravisCI
-
-![[Build Status]](https://travis-ci.org/august-zou/my_mongoid)
 
 
 ## Contributing
