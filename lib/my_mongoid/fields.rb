@@ -1,4 +1,5 @@
 module MyMongoid
+
   class Field
     attr_accessor :name, :options
 
@@ -6,19 +7,19 @@ module MyMongoid
       @name = name
       @options = options
     end
+
   end
 
   module Document
     module Fields
       extend ActiveSupport::Concern
+
       included do
         class_attribute :fields
-
         self.fields = {}
-
         field :_id, :as => :id
-
       end
+
       module ClassMethods
         def field(name,options=nil)
           named = name.to_s
@@ -38,7 +39,7 @@ module MyMongoid
               case key
               when :as 
                 valued = value.to_s
-                
+
                 define_method(valued) do
                   read_attribute(named)
                 end
@@ -50,7 +51,9 @@ module MyMongoid
                 write_attribute(named, value)
               end
             end
+
           end
+          
         end
       end
     end
