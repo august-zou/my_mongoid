@@ -20,6 +20,11 @@ Or install it yourself as:
 
 TODO: Write usage instructions here
 
+## TravisCI
+
+![[Build Status]](https://travis-ci.org/{your_github_account}/my_mongoid)
+
+
 ## Contributing
 
 1. Fork it

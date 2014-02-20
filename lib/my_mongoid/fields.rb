@@ -17,7 +17,7 @@ module MyMongoid
       included do
         class_attribute :fields
         self.fields = {}
-        field :_id, :as => :id
+        field :id, :as => :_id
       end
 
       module ClassMethods
@@ -39,6 +39,7 @@ module MyMongoid
               case key
               when :as 
                 valued = value.to_s
+                self.fields[valued] = Field.new(valued,options)
 
                 define_method(valued) do
                   read_attribute(named)
